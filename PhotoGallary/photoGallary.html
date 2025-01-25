@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Photo Gallery</title>
+    <style>
+        .gallery img {
+            width: 200px;
+            height: 150px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <h1><i>Interactive Photo Gallery</i></h1>
+    
+    <div class="gallery">
+        <img src="a.jpeg" alt="Loading..." onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">
+        <img src="b.jpg" alt="Loading..." onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">
+        <img src="c.jpg" alt="Loading..." onmouseover="onMouseOver(this)" onmouseout="onMouseOut(this)">
+    </div>
+
+    <script>
+        
+        function onMouseOver(imageEle\c.jpgment) {
+            imageElement.style.transform = "scale(1.1)"; 
+            imageElement.style.opacity = "0.8"; 
+        }
+
+        // Function that triggers when the mouse leaves an image
+        function onMouseOut(imageElement) {
+            imageElement.style.transform = "scale(1)"; // Restores the image to its original size
+            imageElement.style.opacity = "1"; // Restores the opacity
+        }
+    </script>
+</body>
+</html>
